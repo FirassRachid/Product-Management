@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link id="mood1" rel="stylesheet" href="curds2.css">
+</head>
+<body>
+  <div class="curd">
+    <div class="head">
+      <h2>Product Management</h2>
+      <button id="mood-but" onclick="toggleMode()">Dark Mode</button>
+    </div>
+
+    <div class="inputs">
+      <input type="text"  placeholder="title" id="title">
+      <div class="price">
+        <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+        <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+        <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+        <input onkeyup="getTotal()" type="number" placeholder="disacount" id="disacount">
+        <small id="Total"></small>
+      </div>
+      <input type="text" placeholder="category" id="category">
+      <input type="number" placeholder="count" id="count">
+      <button id="submit">Creat</button>
+    </div>
+
+
+    <div class="outputs">
+      <div class="searchBlock">
+         <input type="text" onkeyup="searchData(this.value)" placeholder="Search" id="search">
+         <div class="btnSearch">
+          <button onclick="getSearch(this.id)" id="SearchTitle"> Search By Title</button>
+          <button onclick="getSearch(this.id)"  id="SearchCategory">Search By category</button>
+         </div>
+      </div>
+    </div>
+    <div id="deleteAll">
+    </div>
+    
+    <table>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>ads</th>
+        <th>disacount</th>
+        <th>Total</th>
+        <th id="cat">category</th>
+        <th>update</th>
+        <th>delete</th>
+      </tr>
+       <tbody id="tbody" >
+       </tbody> 
+    </table>
+  </div>
+  <p class="conact-me">
+        By 
+        <a
+          href="https://mailto:firassrachid2000@gmail.com"
+          target="_blank"
+        >
+        Firass Rachid /
+        </a>
+        <a  href="https://api.whatsapp.com/send?phone=0963937898507" target="_blank">
+        whatsapp
+        </a>
+      </p>
+  <script src="curds.js"></script>
+</body>
+</html>
